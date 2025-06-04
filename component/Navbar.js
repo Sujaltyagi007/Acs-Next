@@ -3,7 +3,7 @@ import Image from 'next/image';
 import Link from 'next/link';
 import { useState } from 'react';
 import Logo from '@/public/Logo/Acs.png'
-import Cloud from '@/Assets/Home/Cloud.png'
+import Cloud from '@/Assets/Home/cloud-2.png'
 import { Comic_Neue, Luckiest_Guy } from 'next/font/google';
 
 const nunito = Comic_Neue({
@@ -19,7 +19,7 @@ export default function Navbar() {
     const [menu, setMenu] = useState(false)
     return (
         <header className={` relative z-30 top-0 left-0 right-0 font-bold px-4 h-10 lg:px-16 ${nunito.className} `}>
-            <Image src={Cloud} width={1400} height={100} alt='Apna chhota school' className=' absolute top-0 left-0 -translate-y-4 -rotate-x-180 ' />
+            <Image src={Cloud} width={1400} height={100} alt='Apna chhota school' className=' absolute top-0 left-0 -translate-y-2 -rotate-x-180 ' />
             <div className="container mx-auto flex justify-between items-center relative ">
                 <Link href='/'>
                     <div className="logo flex gap-4">
