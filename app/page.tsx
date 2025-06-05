@@ -4,6 +4,8 @@ import HeroSection from '@/component/Home/HeroSection'
 import About from '@/component/Home/About'
 import Mission from '@/component/Home/Mission'
 import Activity from '@/component/Home/Activity'
+import Programs from '@/component/Home/Programs'
+import NewActivity from '@/component/Home/NewActivity'
 export default function page() {
   return (
     <div className=' relative h-dvh'>
@@ -12,6 +14,8 @@ export default function page() {
       <About />
       <Mission />
       <Activity />
+      <Programs />
+      <NewActivity />
     </div>
   )
 }

@@ -6,6 +6,7 @@ import Logo from '@/public/Logo/Acs.png'
 import Cloud from '@/Assets/Home/cloud-2.png'
 import { Comic_Neue, Luckiest_Guy } from 'next/font/google';
 
+
 const nunito = Comic_Neue({
     subsets: ['latin'],
     weight: ['700'],
