@@ -6,6 +6,8 @@ import Mission from '@/component/Home/Mission'
 import Activity from '@/component/Home/Activity'
 import Programs from '@/component/Home/Programs'
 import NewActivity from '@/component/Home/NewActivity'
+import Testimonials from '@/component/Home/Testimonial'
+import Footer from '@/component/Footer'
 export default function page() {
   return (
     <div className=' relative h-dvh'>
@@ -16,6 +18,8 @@ export default function page() {
       <Activity />
       <Programs />
       <NewActivity />
+      <Testimonials />
+      <Footer />
     </div>
   )
 }

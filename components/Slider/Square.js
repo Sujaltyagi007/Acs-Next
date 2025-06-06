@@ -1,13 +1,19 @@
-import React from 'react'
-
+import Slide3 from './Slide3.jpg'
+import School from '../Svg/School.svg'
+import Image from 'next/image'
 export default function Square() {
     return (
-        <>
+        <div className=' cursor-pointer group'>
+            <p className=' translate-y-4 w-full flex justify-center items-center group-hover:translate-y-3 transition-all ease-in delay-75 '>
+                <Image src={School} width={60} height={60} alt='School-icon' className='' />
+            </p>
             <div className=' flex justify-center items-center w-full'>
-
-                <p className=" absolute z-10 w-60 h-60 bg-red-400" ></p>
-                <p className=" relative w-68 h-68 bg-amber-300 " ></p>
+                <p className=" absolute z-10 w-60 h-60 bg-red-400 bg-cover bg-center bg-no-repeat "
+                    style={{ backgroundImage: `url(${Slide3.src})` }}
+                >
+                </p>
+                <p className=" relative w-68 h-68 bg-blue-300 rounded-2xl " ></p>
             </div>
-        </>
+        </div>
     )
 }
