@@ -2,7 +2,6 @@
 import React, { useRef } from 'react'
 import { motion } from 'framer-motion';
 import Link from 'next/link';
-import Image from 'next/image';
 import { Swiper, SwiperSlide } from 'swiper/react';
 import { Navigation, Autoplay, EffectCube } from 'swiper/modules';
 import 'swiper/css';

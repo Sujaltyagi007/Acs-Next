@@ -17,7 +17,7 @@ const nunito = Nunito({
 
 export default function NewActivity() {
     return (
-        <div className=" relative flex flex-col  items-center gap-4">
+        <section className=" relative flex flex-col  items-center gap-4">
             <p className=" absolute z-10 flex justify-end h-fit w-[85%]">
                 <Image src={Rainbow.src} width={150} height={150} alt="Apna Chhota School" />
             </p>
@@ -36,6 +36,6 @@ export default function NewActivity() {
             <div className="   ">
                 <Carousel2 />
             </div>
-        </div>
+        </section>
     );
 }

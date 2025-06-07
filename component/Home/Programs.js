@@ -4,7 +4,6 @@ import Carousel from '@/components/Carousel/Carousel1'
 export default function Programs() {
     return (
         <section className="relative">
-
             <div className="title py-8 px-4">
                 <h3 className=" text-4xl font-bold text-center">
                     Our Programs

@@ -19,6 +19,7 @@ export default function Triangle() {
                     style={{ clipPath: `polygon(50% 0, 0% 100%, 100% 100%)` }} >
                 </p>
             </div>
+            <div className=' w-full my-6 font-bold text-2xl flex justify-center items-center'>Swinning</div>
         </div>
     )
 }

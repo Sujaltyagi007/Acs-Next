@@ -20,6 +20,7 @@ export default function Circle() {
                     style={{ clipPath: `circle(50% at 50% 50%)` }} >
                 </p>
             </div>
+            <div className=' w-full my-6 font-bold text-2xl flex justify-center items-center'>Individual Activity</div>
         </div>
     )
 }

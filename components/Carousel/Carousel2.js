@@ -58,7 +58,7 @@ export default function Carousel2() {
                     delay: 3000
                 }}
                 loop={true}
-                className=' w-[90vw] overflow-hidden h-[60vh] flex justify-center items-center  '
+                className=' w-[90vw] overflow-hidden h-[80vh] flex justify-center items-center  '
             >
                 {
                     slides.map((item, index) => (

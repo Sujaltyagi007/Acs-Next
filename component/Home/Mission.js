@@ -2,7 +2,8 @@
 import React,{useRef} from 'react'
 import Image from 'next/image';
 import { motion, useScroll, useTransform } from 'framer-motion';
-import Owl from '@/Assets/Home/Illustrates/owl.png'
+import Owl from '@/Assets/Home/Demo/owl.png'
+import Cloud from '@/Assets/Home/cloud-2.png'
 import Fish from '@/Assets/Home/Illustrates/fish.png'
 
 export default function Mission() {
@@ -22,7 +23,7 @@ export default function Mission() {
     )
 
     return (
-        <section ref={ref}>
+        <section ref={ref} className=' bg-white'>
             <div className="container relative overflow-hidden mx-auto px-4 py-16 gap-4 h-[50vh]  flex flex-col justify-center items-center lg:flex-row  ">
                 <motion.div
                     style={{
@@ -42,6 +43,9 @@ export default function Mission() {
                         At <strong>Apna Chhota School</strong>, our mission is to bridge the gap in education for underserved communities by providing a nurturing and inclusive environment where every child can thrive. We believe that education is the key to breaking the cycle of poverty and empowering children to <strong>dream big</strong>, think creatively, and build a <strong>brighter future</strong>. Through innovative teaching methods, holistic development programs, and unwavering community support, we aim to unlock the potential of every young mind and pave the way for a more equitable and compassionate world.
                     </p>
                 </div>
+            </div>
+            <div>
+            <Image src={Cloud} width={1400} height={100} alt='apna chhota school' className=' absolute z-10 rotate-180 -translate-y-20  ' />
             </div>
         </section>
     )

@@ -3,6 +3,7 @@ import Image from 'next/image'
 import Img1 from '@/Assets/Home/Image.jpg'
 import Cloud from '@/Assets/Home/cloud-2.png'
 import Grow from '@/components/Svg/Growth.svg'
+import Layer from '@/Assets/Home/Demo/Layer 7.png'
 import { Bubblegum_Sans } from 'next/font/google'
 const bubble = Bubblegum_Sans({
     subsets: ['latin'],
@@ -11,9 +12,9 @@ const bubble = Bubblegum_Sans({
 
 export default function About() {
     return (
-        <div className=' w-full pt-10 '>
+        <section className=' w-full pt-10 bg-white '>
             <Image src={Cloud} width={1400} height={100} alt='apna chhota school' className=' absolute z-10 transform -translate-y-38 ' />
-            <div className=' mx-auto container flex justify-between items-center p-10  '>
+            <div className='mx-auto container flex justify-between items-center p-10  '>
                 <div className='flex justify-center items-center h-[70vh] gap-10 w-2/5 '>
                     <div className=' rounded-2xl overflow-hidden w-3/5 '>
                         <Image src={Img1} width={400} height={200} alt='Apna chhota school' />
@@ -31,24 +32,29 @@ export default function About() {
                             <p className=' flex text-start w-full px-2 text-2xl font-extrabold text-[#20fa8d] '>10+</p>
                             <p className=' text-[12px] text-gray-400 '> Learning Ladder School</p>
                         </div>
-                        
+
                     </div>
                 </div>
-                <div className=' w-2/5 h-full ' >
-                    <p className={`${bubble.className} text-[#20fa8d]`}>
-                        About Us
-                    </p>
-                    <h2 className=' font-bold text-2xl'>
-                        Unlocking Potential, One Child at a just time in school.
-                    </h2>
+                <div className=' w-2/5 h-full flex flex-col gap-8 ' >
+                    <div>
+                        <p className={`${bubble.className} text-[#20fa8d] text-[21px]`}>
+                            About Us
+                        </p>
+                        <p className=' font-bold text-[34px] leading-10'>
+                            Unlocking Potential, One Child at a just time in school.
+                        </p>
+                    </div>
                     <p>
-                        lorem
+                        Apna Chhota School is a nurturing preschool that focuses on holistic early childhood development through play-based learning, care, and creativity in a safe and joyful environment.
                     </p>
-                    <button className=' p-3 rounded-lg border border-black/50'>
-                        Get a quote
+                    <button className=' p-3 cursor-pointer w-fit rounded-lg border border-black/50'>
+                        Explore Now
                     </button>
                 </div>
+                <div className=' absolute w-full mt-10 left-0 flex justify-end pointer-events-none'>
+                    <Image src={Layer} width={170} height={100} alt='Cartoon' className='' />
+                </div>
             </div>
-        </div>
+        </section>
     )
 }

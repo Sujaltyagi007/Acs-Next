@@ -24,6 +24,7 @@ export default function Rombus() {
                     }}
                 ></p>
             </div>
+            <div className=' w-full my-6 font-bold text-2xl flex justify-center items-center'>Painting</div>
         </div>
     );
 }

@@ -14,6 +14,7 @@ export default function Square() {
                 </p>
                 <p className=" relative w-68 h-68 bg-blue-300 rounded-2xl " ></p>
             </div>
+            <div className=' w-full my-6 font-bold text-2xl flex justify-center items-center'>Craft</div>
         </div>
     )
 }
