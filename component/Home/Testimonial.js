@@ -113,9 +113,9 @@ export default function Testimonial() {
                                 
                                 <div className=" flex justify-between items-start w-full h-1/5 ">
                                     <p className=" text-4xl leading-0">.....</p>
-                                    <p className=" flex flex-col justify-center items-center ">
+                                    <p className=" flex flex-col justify-center items-center font-extrabold ">
                                         ~{Reviews[ActiveSlide].parent_name}
-                                        <span>{Reviews[ActiveSlide].job}</span>
+                                        <span className=" font-normal">{Reviews[ActiveSlide].job}</span>
                                     </p>
                                 </div>
                             </motion.div>
