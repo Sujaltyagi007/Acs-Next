@@ -17,10 +17,9 @@ const lucky = Luckiest_Guy({
 })
 
 export default function Navbar() {
-    const [menu, setMenu] = useState(false)
     return (
         <header className={` relative z-30 top-0 left-0 right-0 font-bold px-4 h-10 lg:px-16 ${nunito.className} `}>
-            <Image src={Cloud} width={1400} height={100} alt='Apna chhota school' className=' absolute top-0 left-0 -translate-y-2 -rotate-x-180 ' />
+            <Image src={Cloud} width={1400} height={100} alt='Apna chhota school' className=' w-[370px] h-[80px] lg:h-[110px] lg:w-[1440px]  absolute top-0 left-0 -translate-y-2 -rotate-x-180 ' />
             <div className="container mx-auto flex justify-between items-center relative ">
                 <Link href='/'>
                     <div className="logo flex gap-4">
@@ -38,9 +37,8 @@ export default function Navbar() {
                         <Link href='/Gallery'><li className=' cursor-pointer px-4 py-2 rounded-full hover:bg-slate-300'>Gallery</li></Link>
                     </ul>
                 </nav>
-                <Link href='/contact'><button className='text-white cursor-pointer bg-amber-600   px-4 py-2 rounded-md block'>Contact Us</button></Link>
-                <div className="md:hidden mx-1 cursor-pointer"
-                    onClick={() => setMenu(!menu)}>
+                <Link href='/contact'><button className='text-white cursor-pointer bg-amber-600 px-4 py-2 rounded-md hidden md:block'>Contact Us</button></Link>
+                <div className="md:hidden mx-1 cursor-pointer">
                     <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth={2} stroke="currentColor" className="w-10 h-10">
                         <path strokeLinecap="round" strokeLinejoin="round" d="M3.75 6.75h16.5M3.75 12h16.5m-16.5 5.25h16.5" />
                     </svg>

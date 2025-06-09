@@ -25,6 +25,7 @@ export default function ActivityCard({ item }) {
       <div className=" -translate-y-7 flex justify-center items-center relative bg-amber-300 ">
         <Ring item={item} w={'42px'} h={'42px'} first={1} className=' absolute  ' />
         <Ring item={item} w={'30px'} h={'30px'} first={0} className='absolute  ' />
+        <Ring item={{color:'black'}} w={'8px'} h={'8px'} first={'0'}  className='absolute  ' />
       </div>
     </div>
   );

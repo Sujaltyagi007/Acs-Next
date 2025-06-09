@@ -53,7 +53,7 @@ export default function Activity() {
     },
   ];
   return (
-    <section ref={ref} className="relative overflow-hidden">
+    <section ref={ref} className="relative overflow-hidden ">
       <motion.div
         style={{ x }}
         className="absolute top-20 2xl:-left-40 2xl:top-48 w-full h-full "
@@ -66,7 +66,7 @@ export default function Activity() {
           height={200}
         />
       </motion.div>
-      <div className="title py-8 px-4">
+      <div className="title md:py-8 md:pt-8 pt-8 px-4">
         <h3 className=" text-4xl lg:text-5xl font-extrabold text-center">
           Our Activities
           <div className="w-1/12 m-auto mt-3 h-1 bg-primary rounded-full"></div>
@@ -76,7 +76,7 @@ export default function Activity() {
             <ActivityCard key={index} item={item} />
           ))}
         </div>
-        <motion.div className=" w-full flex justify-end translate-x-8 ">
+        <motion.div className=" w-full flex justify-end translate-x-8 -translate-y-16  md:-translate-y-10 ">
           <Image
             src={Snale.src}
             width={500}
