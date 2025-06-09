@@ -57,7 +57,7 @@ export default function Testimonial() {
     const [ActiveSlide, setActiveSlide] = useState(1);
     return (
         <section className=" flex flex-col justify-center items-center w-full my-10 h-[100vh] bg-[#fff9f4]">
-            <div className="flex flex-col justify-center items-center gap-4  ">
+            <div className="flex flex-col justify-center items-center md:gap-4 gap-2  ">
                 <span className=" flex justify-center items-center gap-4">
                     <Image
                         src={StrawBerry}
@@ -68,8 +68,8 @@ export default function Testimonial() {
                     />
                     <p className={`${bubble.className} text-[#eb1551]`}>Happy Parents</p>
                 </span>
-                <p className=" text-4xl font-bold ml-4 ">Our Testimonial</p>
-                <p className=" w-3/5 text-center">
+                <p className=" md:text-4xl text-2xl font-bold ml-4 ">Our Testimonial</p>
+                <p className=" md:w-3/5 w-[90%] md:text-[16px] text-[14px] text-center">
                     At Apna Chhota School, parents share heartfelt experiences of their
                     children's joyful learning journey, caring teachers, and a nurturing
                     environment that helps every child grow with confidence and happiness.
@@ -78,21 +78,21 @@ export default function Testimonial() {
             <AnimatePresence mode="wait">
                 {ActiveSlide && (
                     <div
-                        className=" mx-auto container flex justify-center items-center my-10  bg-center bg-no-repeat h-full"
+                        className=" mx-auto container flex justify-center items-center md:my-10 my-2 bg-center bg-no-repeat h-full"
                         style={{ backgroundImage: `url(${BackGround.src})` }} >
                         <div
-                            className="flex justify-around size-3/5 full  "
+                            className="flex md:flex-row flex-col-reverse justify-around md:size-3/5 px-6 md:px-0  "
                             onClick={() =>
                                 setActiveSlide(ActiveSlide === 4 ? 1 : ActiveSlide + 1)
                             } >
-                                <div className=" w-full h-2/5 absolute left-0 z-10 justify-center flex items-center ">
-                                    <div className=" mx-auto flex justify-between container px-18  w-full  ">
-                                        <Image src={Inset} width={120} height={80} alt="Insect" className=" cursor-pointer" />
-                                        <Image src={Inset} width={120} height={80} alt="Insect" className=" rotate-180 cursor-pointer" />
+                                <div className=" w-full md:h-2/5 h-3/5 absolute left-0 z-10 justify-center md:items-center flex items-end ">
+                                    <div className=" mx-auto flex justify-between container md:px-18 px-9 w-full  ">
+                                        <Image src={Inset} width={120} height={80} alt="Insect" className=" cursor-pointer select-none" />
+                                        <Image src={Inset} width={120} height={80} alt="Insect" className=" rotate-180 cursor-pointer select-none " />
                                     </div>
                                 </div>
                             <motion.div
-                                className=" flex flex-col justify-center w-full items-center gap-6 text-white "
+                                className=" flex flex-col justify-center w-full items-center md:gap-6 gap-2 text-white "
                                 key={ActiveSlide}
                                 initial={{ opacity: 0 }}
                                 animate={{ opacity: 1 }}
@@ -107,7 +107,7 @@ export default function Testimonial() {
                                         <FaStar className=" text-amber-400" />
                                     </span>
                                 </p>
-                                <div className="w-full select-none">
+                                <div className="w-full text-[12px] md:text-[16px] md:w-full md:leading-normal leading-3 select-none">
                                     <p>{Reviews[ActiveSlide].review}</p>
                                 </div>
                                 
@@ -119,9 +119,9 @@ export default function Testimonial() {
                                     </p>
                                 </div>
                             </motion.div>
-                            <div className=" flex justify-center -translate-y-4 w-1/5 h-full">
+                            <div className=" flex justify-start md:justify-center -translate-y-6 md:-translate-y-12 md:w-1/5 w-full h-full">
                                 <motion.div
-                                    className="w-28 h-28 bg-amber-500 flex justify-center items-center rounded-full"
+                                    className=" md:w-28 md:h-28 w-28 h-28 bg-amber-500 flex justify-center items-center rounded-full"
                                     key={ActiveSlide}
                                     initial={{ rotateX: 325, rotateY: 135 }}
                                     animate={{ rotateX: 0, rotateY: 0 }}

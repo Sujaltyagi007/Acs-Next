@@ -12,47 +12,47 @@ const bubble = Bubblegum_Sans({
 
 export default function About() {
     return (
-        <section className=' w-full pt-10 bg-white '>
-            <Image src={Cloud} width={1400} height={100} alt='apna chhota school' className=' absolute z-10 transform -translate-y-38 ' />
-            <div className='mx-auto container flex justify-between items-center p-10  '>
-                <div className='flex justify-center items-center h-[70vh] gap-10 w-2/5 '>
-                    <div className=' rounded-2xl overflow-hidden w-3/5 '>
+        <section className=' relative w-full pt-10 bg-white '>
+            <Image src={Cloud} width={1400} height={100} alt='apna chhota school' className=' absolute z-10 transform -translate-y-16 md:-translate-y-38 ' />
+            <div className='mx-auto flex-col-reverse md:flex-row container flex justify-between md:items-center items-start  p-10  '>
+                <div className='flex justify-center items-center md:h-[70vh] min-h-fit py-6 md:py-0 gap-4 md:gap-10 md:w-2/5 w-full '>
+                    <div className=' rounded-2xl overflow-hidden md:w-3/5 '>
                         <Image src={Img1} width={400} height={200} alt='Apna chhota school' />
                     </div>
-                    <div className=' flex flex-col justify-between py-6 h-full w-2/5 gap-10  '>
-                        <div className=' flex justify-center items-center h-full '>
-                            <Image src={Pencil} width={50} height={50} alt='Apna chhota school' />
+                    <div className=' flex flex-col justify-between py-6 h-full md:w-2/5 w-full md:gap-10 gap-2 '>
+                        <div className=' flex justify-center items-center h-full w-full '>
+                            <Image src={Pencil} width={50} height={50} alt='Apna chhota school' className='' />
                         </div>
                         <div className=' flex flex-col text-center h-full justify-center p-2 items-center rounded-xl bg-amber-500/40 '>
-                            <Image src={Grow} alt='Grow' width={40} height={40} className='' />
+                            <Image src={Grow} alt='Grow' width={40} height={40} className=' md:w-12 w-8 ' />
                             <p className=' font-bold'>Academy</p>
-                            <p className=' text-[12px]'>Learning Leading School</p>
+                            <p className=' md:text-[12px] text-[10px]'>Learning Leading School</p>
                         </div>
-                        <div className=' flex flex-col h-full text-center justify-center shadow px-4 items-center rounded-xl '>
-                            <p className=' flex text-start w-full px-2 text-2xl font-extrabold text-[#20fa8d] '>10+</p>
-                            <p className=' text-[12px] text-gray-400 '> Learning Ladder School</p>
+                        <div className=' flex flex-col h-full md:text-center justify-center shadow md:px-4 px-2 items-center rounded-xl '>
+                            <p className=' flex text-start w-full md:px-2 text-2xl font-extrabold text-[#20fa8d] '>10+</p>
+                            <p className=' md:text-[12px] text-[10px] text-gray-400 '> Learning Ladder School</p>
                         </div>
 
                     </div>
                 </div>
-                <div className=' w-2/5 h-full flex flex-col gap-8 ' >
+                <div className=' md:w-2/5 w-full h-full flex flex-col md:gap-8 gap-2 ' >
                     <div>
-                        <p className={`${bubble.className} text-[#20fa8d] text-[21px]`}>
+                        <p className={`${bubble.className} text-[#20fa8d] md:text-[21px] text-[16px] `}>
                             About Us
                         </p>
-                        <p className=' font-bold text-[34px] leading-10'>
+                        <p className=' font-bold md:text-[34px] text-[20px] md:leading-10'>
                             Unlocking Potential, One Child at a just time in school.
                         </p>
                     </div>
                     <p>
                         Apna Chhota School is a nurturing preschool that focuses on holistic early childhood development through play-based learning, care, and creativity in a safe and joyful environment.
                     </p>
-                    <button className=' p-3 cursor-pointer w-fit rounded-lg border border-black/50'>
+                    <button className=' p-3 text-[12px] md:text-[15px] cursor-pointer w-fit rounded-lg border border-black/50'>
                         Explore Now
                     </button>
                 </div>
-                <div className=' absolute w-full mt-10 left-0 flex justify-end pointer-events-none'>
-                    <Image src={Layer} width={170} height={100} alt='Cartoon' className='' />
+                <div className=' absolute w-full md:mt-10 left-0 flex top-10 justify-end pointer-events-none'>
+                    <Image src={Layer} width={170} height={100} alt='Cartoon' className=' md:w-36 w-24 ' />
                 </div>
             </div>
         </section>

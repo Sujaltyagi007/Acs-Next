@@ -24,7 +24,7 @@ export default function Mission() {
 
     return (
         <section ref={ref} className=' bg-white'>
-            <div className="container relative overflow-hidden mx-auto px-4 py-16 gap-4 h-[50vh]  flex flex-col justify-center items-center lg:flex-row  ">
+            <div className="container relative overflow-hidden mx-auto px-4 py-16 gap-4 md:h-[50vh] h-[45vh]  flex flex-col justify-center items-center lg:flex-row  ">
                 <motion.div
                     style={{
                         translateX: translate,
@@ -45,7 +45,7 @@ export default function Mission() {
                 </div>
             </div>
             <div>
-            <Image src={Cloud} width={1400} height={100} alt='apna chhota school' className=' absolute z-10 rotate-180 -translate-y-20  ' />
+            <Image src={Cloud} width={1400} height={100} alt='apna chhota school' className=' absolute z-10 rotate-180 md:-translate-y-20 -translate-y-2  ' />
             </div>
         </section>
     )

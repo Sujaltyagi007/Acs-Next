@@ -47,18 +47,25 @@ export default function Carousel2() {
 
     return (
         <div className=' relative w-full flex flex-col justify-center items-center '>
-            {/* <p className=' absolute z-10 border border-black w-full h-full '>
-                <Image src={ButterFly} width={100} height={100} alt='Butter-Fly' />
-            </p> */}
             <Swiper
                 modules={[Navigation, Autoplay]}
                 spaceBetween={10}
-                slidesPerView={3}
                 autoplay={{
                     delay: 3000
                 }}
                 loop={true}
-                className=' w-[90vw] overflow-hidden h-[80vh] flex justify-center items-center  '
+                className=' w-[90vw] overflow-hidden md:h-[80vh] h-[70vh] flex justify-center items-center  '
+                breakpoints={{
+                    320:{
+                        slidesPerView:1
+                    },
+                    420:{
+                        slidesPerView:2
+                    },
+                    720:{
+                        slidesPerView:3
+                    }
+                }}
             >
                 {
                     slides.map((item, index) => (

@@ -3,7 +3,7 @@ import Carousel from '@/components/Carousel/Carousel1'
 
 export default function Programs() {
     return (
-        <section className="relative">
+        <section className="relative h-[70vh] md:h-dvh ">
             <div className="title py-8 px-4">
                 <h3 className=" text-4xl font-bold text-center">
                     Our Programs

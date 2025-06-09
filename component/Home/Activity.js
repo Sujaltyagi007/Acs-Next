@@ -26,6 +26,7 @@ export default function Activity() {
       title: "Celebrating Republic Day",
       color: "#ffdbd2",
       Img: Bg1,
+      fontColor: '#e95d3a'
     },
     {
       bgImage: Activity2,
@@ -33,6 +34,7 @@ export default function Activity() {
       color: "#dff8ff",
       style: "lg:mt-16 mt-0",
       Img: Bg2,
+      fontColor: '#167287'
     },
     {
       bgImage: Activity3,
@@ -40,12 +42,14 @@ export default function Activity() {
       color: "#ffefdf",
       style: "lg:mt-16 mt-0",
       Img: Bg1,
+      fontColor: '#f68f29'
     },
     {
       bgImage: Activity4,
       title: "Celebrating Dussehra Day",
       color: "#e6f9e5",
       Img: Bg2,
+      fontColor: '#5e9f5a'
     },
   ];
   return (
@@ -67,18 +71,18 @@ export default function Activity() {
           Our Activities
           <div className="w-1/12 m-auto mt-3 h-1 bg-primary rounded-full"></div>
         </h3>
-        <div className="container m-auto flex justify-around my-20 flex-col lg:flex-row">
+        <div className="container mx-auto grid my-20 grid-cols-2 lg:grid-cols-4">
           {Activities.map((item, index) => (
             <ActivityCard key={index} item={item} />
           ))}
         </div>
-        <motion.div style={{ x }} className=" w-full flex justify-end">
+        <motion.div className=" w-full flex justify-end translate-x-8 ">
           <Image
             src={Snale.src}
             width={500}
             height={100}
             alt="apna chhota school"
-            className=""
+            className=" w-56 md:w-[480px]  "
           />
         </motion.div>
       </div>
