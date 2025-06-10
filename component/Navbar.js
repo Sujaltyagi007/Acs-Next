@@ -1,7 +1,6 @@
 'use client'
 import Image from 'next/image';
 import Link from 'next/link';
-import { useState } from 'react';
 import Logo from '@/public/Logo/Acs.png'
 import Cloud from '@/Assets/Home/cloud-2.png'
 import { Comic_Neue, Luckiest_Guy } from 'next/font/google';
@@ -19,7 +18,7 @@ const lucky = Luckiest_Guy({
 export default function Navbar() {
     return (
         <header className={` relative z-30 top-0 left-0 right-0 font-bold px-4 h-10 lg:px-16 ${nunito.className} `}>
-            <Image src={Cloud} width={1400} height={100} alt='Apna chhota school' className=' w-[370px] h-[80px] lg:h-[110px] lg:w-[1440px]  absolute top-0 left-0 -translate-y-2 -rotate-x-180 ' />
+            <Image src={Cloud} width={1600} height={100} alt='Apna chhota school' className=' w-full absolute top-0 left-0 -translate-y-2 -rotate-x-180 ' />
             <div className="container mx-auto flex justify-between items-center relative ">
                 <Link href='/'>
                     <div className="logo flex gap-4">

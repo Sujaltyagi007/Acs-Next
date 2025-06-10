@@ -54,7 +54,7 @@ export default function Carousel2() {
                     delay: 3000
                 }}
                 loop={true}
-                className=' w-[90vw] overflow-hidden md:h-[80vh] h-[70vh] flex justify-center items-center  '
+                className=' w-[90vw] overflow-hidden md:h-fit flex justify-center items-center  '
                 breakpoints={{
                     320:{
                         slidesPerView:1
@@ -64,6 +64,9 @@ export default function Carousel2() {
                     },
                     720:{
                         slidesPerView:3
+                    },
+                    1920:{
+                        slidesPerView:4
                     }
                 }}
             >

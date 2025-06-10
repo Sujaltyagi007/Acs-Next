@@ -53,7 +53,7 @@ export default function Activity() {
     },
   ];
   return (
-    <section ref={ref} className="relative overflow-hidden ">
+    <section ref={ref} className="relative overflow-hidden py-4 md:py-10 ">
       <motion.div
         style={{ x }}
         className="absolute top-20 2xl:-left-40 2xl:top-48 w-full h-full "

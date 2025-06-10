@@ -17,7 +17,7 @@ const nunito = Nunito({
 
 export default function NewActivity() {
     return (
-        <section className=" relative flex flex-col items-center gap-4">
+        <section className=" relative flex flex-col items-center gap-4 py-10">
             <div className="absolute z-10 flex justify-between items-center px-4 md:px-24  w-full ">
                 <p className=" h-fit -translate-y-3 md:-translate-y-0 ">
                     <Image src={ButterFly} width={100} height={100} alt='Butter-Fly' className="w-16 md:w-32 " />
@@ -38,9 +38,7 @@ export default function NewActivity() {
                     learners.
                 </p>
             </div>
-            <div className="   ">
-                <Carousel2 />
-            </div>
+            <Carousel2 />
         </section>
     );
 }

@@ -56,9 +56,9 @@ export default function Testimonial() {
     ];
     const [ActiveSlide, setActiveSlide] = useState(1);
     return (
-        <section className=" flex flex-col justify-center items-center w-full my-10 h-[100vh] bg-[#fff9f4]">
-            <div className="flex flex-col justify-center items-center md:gap-4 gap-2  ">
-                <span className=" flex justify-center items-center gap-4">
+        <section className=" flex flex-col justify-center items-center w-full my-10 h-[75vh] md:h-fit md:py-10 bg-[#fff9f4] text-[14px] md:text-[14px] lg:text-[16px] 2xl:text-[20px]">
+            <div className="flex flex-col justify-center items-center md:gap-4 gap-2 ">
+                <span className=" flex justify-center -translate-x-5 md:translate-x-0 items-center gap-4">
                     <Image
                         src={StrawBerry}
                         alt="StrawBerry-image"
@@ -77,22 +77,20 @@ export default function Testimonial() {
             </div>
             <AnimatePresence mode="wait">
                 {ActiveSlide && (
-                    <div
-                        className=" mx-auto container flex justify-center items-center md:my-10 my-2 bg-center bg-no-repeat h-full"
+                    <div className=" mx-auto w-full lg:container flex justify-center items-center my-10 bg-center bg-cover bg-no-repeat md:h-[60vh] h-fit "
                         style={{ backgroundImage: `url(${BackGround.src})` }} >
-                        <div
-                            className="flex md:flex-row flex-col-reverse justify-around md:size-3/5 px-6 md:px-0  "
+                        <div className="flex md:flex-row flex-col-reverse justify-around md:size-3/5 px-6 md:px-0  "
                             onClick={() =>
                                 setActiveSlide(ActiveSlide === 4 ? 1 : ActiveSlide + 1)
                             } >
-                                <div className=" w-full md:h-2/5 h-3/5 absolute left-0 z-10 justify-center md:items-center flex items-end ">
-                                    <div className=" mx-auto flex justify-between container md:px-18 px-9 w-full  ">
+                                <div className=" w-full 2xl:h-[320px] lg:h-[240px] md:h-[200px] h-[340px] absolute left-0 z-10 justify-center md:items-center flex items-end ">
+                                    <div className=" mx-auto flex justify-between lg:container md:px-3 2xl:px-0  lg:px-20 px-9 w-full  ">
                                         <Image src={Inset} width={120} height={80} alt="Insect" className=" cursor-pointer select-none" />
                                         <Image src={Inset} width={120} height={80} alt="Insect" className=" rotate-180 cursor-pointer select-none " />
                                     </div>
                                 </div>
                             <motion.div
-                                className=" flex flex-col justify-center w-full items-center md:gap-6 gap-2 text-white "
+                                className=" flex flex-col justify-center w-full -translate-y-6 md:-translate-y-0 items-center lg:gap-4 md:gap-3 gap-2 text-white "
                                 key={ActiveSlide}
                                 initial={{ opacity: 0 }}
                                 animate={{ opacity: 1 }}
@@ -107,7 +105,7 @@ export default function Testimonial() {
                                         <FaStar className=" text-amber-400" />
                                     </span>
                                 </p>
-                                <div className="w-full text-[12px] md:text-[16px] md:w-full md:leading-normal leading-3 select-none">
+                                <div className="w-full text-[12px] md:text-[14px] lg:text-[16px] 2xl:text-[20px] md:w-full lg:leading-6 md:leading-5 leading-3 select-none">
                                     <p>{Reviews[ActiveSlide].review}</p>
                                 </div>
                                 
@@ -119,9 +117,9 @@ export default function Testimonial() {
                                     </p>
                                 </div>
                             </motion.div>
-                            <div className=" flex justify-start md:justify-center -translate-y-6 md:-translate-y-12 md:w-1/5 w-full h-full">
+                            <div className=" flex justify-start md:justify-center -translate-y-7 md:-translate-y-12 md:w-1/5 w-full h-full">
                                 <motion.div
-                                    className=" md:w-28 md:h-28 w-28 h-28 bg-amber-500 flex justify-center items-center rounded-full"
+                                    className=" 2xl:w-38 2xl:h-38 lg:w-32 lg:h-32 md:w-28 md:h-28 w-24 h-24 bg-amber-500 flex justify-center items-center rounded-full"
                                     key={ActiveSlide}
                                     initial={{ rotateX: 325, rotateY: 135 }}
                                     animate={{ rotateX: 0, rotateY: 0 }}
@@ -129,7 +127,7 @@ export default function Testimonial() {
                                     transition={{ duration: 0.8, ease: "easeInOut" }}
                                 >
                                     <motion.div
-                                        className="w-24 h-24 bg-white rounded-full bg-center bg-cover bg-no-repeat"
+                                        className="w-22 h-22 lg:w-28 2xl:w-34 2xl:h-34 lg:h-28 md:w-24 md:h-24 bg-white rounded-full bg-center bg-cover bg-no-repeat"
                                         style={{
                                             backgroundImage: `url(${Reviews[ActiveSlide].Img.src})`,
                                         }}

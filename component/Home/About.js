@@ -13,7 +13,7 @@ const bubble = Bubblegum_Sans({
 export default function About() {
     return (
         <section className=' relative w-full pt-10 bg-white '>
-            <Image src={Cloud} width={1400} height={100} alt='apna chhota school' className=' absolute z-10 transform -translate-y-16 md:-translate-y-38 ' />
+            <Image src={Cloud} width={1600} height={100} alt='apna chhota school' className=' absolute z-10 transform -translate-y-16 md:-translate-y-32 w-full  ' />
             <div className='mx-auto flex-col-reverse md:flex-row container flex justify-between md:items-center items-start  p-10  '>
                 <div className='flex justify-center items-center md:h-[70vh] min-h-fit py-6 md:py-0 gap-4 md:gap-10 md:w-2/5 w-full '>
                     <div className=' rounded-2xl overflow-hidden md:w-3/5 '>
@@ -52,7 +52,7 @@ export default function About() {
                     </button>
                 </div>
                 <div className=' absolute w-full md:mt-10 left-0 flex top-10 justify-end pointer-events-none'>
-                    <Image src={Layer} width={170} height={100} alt='Cartoon' className=' md:w-36 w-24 ' />
+                    <Image src={Layer} width={170} height={100} alt='Cartoon' className=' md:w-36 w-22 2xl:translate-y-2 ' />
                 </div>
             </div>
         </section>
