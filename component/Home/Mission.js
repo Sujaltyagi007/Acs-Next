@@ -23,7 +23,7 @@ export default function Mission() {
     )
 
     return (
-        <section ref={ref} className=' bg-white md:h-fit md:py-10 py-2 h-[50vh]'>
+        <section ref={ref} className=' bg-white md:h-fit md:py-10 py-2 '>
             <div className=" lg:container relative overflow-hidden mx-auto 2xl:px-0 px-8 py-20 gap-4 flex flex-col justify-center items-center lg:flex-row  ">
                 <motion.div
                     style={{
@@ -45,7 +45,7 @@ export default function Mission() {
                 </div>
             </div>
             <div>
-            <Image src={Cloud} width={1600} height={100} alt='apna chhota school' className=' absolute w-full z-10 rotate-180 md:-translate-y-4 -translate-y-4.5  ' />
+            <Image src={Cloud} width={1600} height={100} alt='apna chhota school' className=' absolute w-full z-10 rotate-180 md:-translate-y-4 -translate-y-[10%]  ' />
             </div>
         </section>
     )

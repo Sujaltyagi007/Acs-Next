@@ -31,7 +31,7 @@ export default function Footer() {
         DinaSour,
     ];
     return (
-        <div className=" h-[88vh] text-[12px] md:text-[14px] lg:text-[16px] 2xl:text-[20px] md:h-fit relative bg-orange-800 w-full flex flex-col justify-between ">
+        <div className=" text-[12px] md:text-[14px] lg:text-[16px] 2xl:text-[20px] md:h-fit relative bg-orange-800 w-full flex flex-col justify-between ">
             <div className="absolute z-10 h-full flex flex-col justify-between items-center">
                 <div className="relative flex flex-col justify-center items-center ">
                     <div className="absolute mx-auto container -translate-y-3 md:-translate-y-0 md:pt-3 lg:pt-6 2xl:pt-10 top-0 z-20 w-full flex justify-around px-10">
@@ -94,7 +94,7 @@ export default function Footer() {
                             <p className=" flex justify-center items-center font-bold text-orange-800 ">Crafted & Maintained with ❤ by <a href="https://mstyenterprises.com/" className=" px-0.5 font-extrabold " > Msty Enterprises.</a></p>
                         </div>
                     </div>
-                    <div className=" hidden relative md:flex w-full justify-between md:pb-10 lg:pb-12 2xl:pb-24 lg:pt-6 2xl:pt-10 z-10 ">
+                    <div className=" hidden relative md:flex w-full justify-between -translate-y-[37%] lg:pt-6 2xl:pt-10 z-10 ">
                         {
                             Images.map((item, index) => (
                                 <Image key={index} alt='Apna Chhota School' src={item.src} width={360} height={280} className=" w-50 h-35  " />
@@ -103,7 +103,7 @@ export default function Footer() {
                     </div>
                 </div>
             </div>
-            <div className=" mx-auto lg:container md:px-8 md:pb-10 lg:px-0 lg:pb-14 2xl:pb-10 2xl:px-0 flex justify-between items-center">
+            <div className=" mx-auto lg:container py-10 md:px-8 md:pb-10 lg:px-0 lg:pb-14 2xl:pb-10 2xl:px-0 flex justify-between items-center">
                 <div className=" relative z-50 py-8 md:py-[10%] 2xl:py-[14%] w-full grid md:grid-cols-2 gap-2 grid-cols-1 ">
                     <div className=" px-4 md:px-4 lg:px-6 2xl:px-10 py-2 md:py-4  ">
                         <p className=" flex items-center gap-2 md:gap-6 ">
@@ -194,8 +194,6 @@ export default function Footer() {
                 </div>
             </div>
             {/* <div className="absolute hidden md:flex items-end w-full h-full">
-                
-
             </div> */}
             {/* <div className=" relative flex flex-col md:flex-row items-end justify-center ">
                 <div className=" mx-auto container absolute px-4 md:px-0 z-10 text-orange-800 flex flex-row justify-between items-center ">

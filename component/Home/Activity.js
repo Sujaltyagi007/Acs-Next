@@ -11,7 +11,13 @@ import Bg1 from "@/Assets/Home/BackGround/BackGround1.png";
 import Bg2 from "@/Assets/Home/BackGround/Background2.png";
 import Snale from "@/Assets/Home/Demo/Snale.png";
 import ActivityCard from "@/components/Card/ActivityCard";
+import Education from '@/components/Svg/Education.svg'
+import { Bubblegum_Sans } from "next/font/google";
 
+const Bubble = Bubblegum_Sans({
+  subsets:['latin'],
+  weight:['400']
+})
 export default function Activity() {
   const ref = useRef(null);
   const { scrollYProgress } = useScroll({
@@ -68,8 +74,12 @@ export default function Activity() {
       </motion.div>
       <div className="title md:py-8 md:pt-8 pt-8 px-4">
         <h3 className=" text-4xl lg:text-5xl font-extrabold text-center">
+          <p className={`${Bubble.className} text-[14px] flex flex-col justify-center items-center py-2 text-[#eb1551] text-center`}>
+            <span>
+              <Image src={Education} width={60} height={60} alt="Eduaction" className="" />
+            </span>
+            Fun & Learning Adventures</p>
           Our Activities
-          <div className="w-1/12 m-auto mt-3 h-1 bg-primary rounded-full"></div>
         </h3>
         <div className="container mx-auto grid my-20 grid-cols-2 lg:grid-cols-4">
           {Activities.map((item, index) => (

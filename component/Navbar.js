@@ -4,8 +4,9 @@ import Link from 'next/link';
 import Logo from '@/public/Logo/Acs.png'
 import Cloud from '@/Assets/Home/cloud-2.png'
 import { Comic_Neue, Luckiest_Guy } from 'next/font/google';
-
-
+import { AnimatePresence } from 'motion/react';
+import { useState } from 'react';
+import { motion } from 'motion/react';
 const nunito = Comic_Neue({
     subsets: ['latin'],
     weight: ['700'],
@@ -14,12 +15,12 @@ const lucky = Luckiest_Guy({
     subsets: ['latin'],
     weight: ['400'],
 })
-
 export default function Navbar() {
+    const [isVisible, setIsVisible] = useState(true)
     return (
-        <header className={` relative z-30 top-0 left-0 right-0 font-bold px-4 h-10 lg:px-16 ${nunito.className} `}>
-            <Image src={Cloud} width={1600} height={100} alt='Apna chhota school' className=' w-full absolute top-0 left-0 -translate-y-2 -rotate-x-180 ' />
-            <div className="container mx-auto flex justify-between items-center relative ">
+        <header className={` absolute z-30 top-0 left-0 right-0 font-bold h-10 lg:px-16 ${nunito.className} `}>
+            <Image src={Cloud} width={1600} height={100} alt='Apna chhota school' className=' w-full hidden md:block absolute top-0 left-0 -translate-y-2 -rotate-x-180 ' />
+            <div className="container mx-auto hidden md:flex justify-between items-center relative ">
                 <Link href='/'>
                     <div className="logo flex gap-4">
                         <Image src={Logo} width={70} height={70} alt="Apna chhota school" />
@@ -43,6 +44,65 @@ export default function Navbar() {
                     </svg>
                 </div>
             </div>
+            <div className=' relative z-10 mx-auto container block md:hidden h-12 bg-white '>
+                <div className=' flex justify-between items-center px-4 py-0.5 '>
+                    <div>
+                        <Image src={Logo} width={60} height={60} alt='Logo' className=' w-14 h-14 ' />
+                    </div>
+                    <AnimatePresence mode="wait">
+                        <div
+                            className=''
+                            onClick={() => setIsVisible(!isVisible)}
+                        >
+                            {isVisible ? (
+                                <motion.div
+                                    key="svg"
+                                    initial={{ opacity: 0, y: 0 }}
+                                    animate={{ opacity: 1, y: 0 }}
+                                    transition={{ duration: 0.5 }}
+                                >
+                                    <svg
+                                        xmlns="http://www.w3.org/2000/svg"
+                                        fill="none"
+                                        viewBox="0 0 24 24"
+                                        strokeWidth={2}
+                                        stroke="currentColor"
+                                        className="w-10 h-10"
+                                    >
+                                        <path
+                                            strokeLinecap="round"
+                                            strokeLinejoin="round"
+                                            d="M3.75 6.75h16.5M3.75 12h16.5m-16.5 5.25h16.5"
+                                        />
+                                    </svg>
+                                </motion.div>
+                            ) : (
+                                <motion.div
+                                    key="text"
+                                    initial={{ opacity: 0, y: 0 }}
+                                    animate={{ opacity: 1, y: 0 }}
+                                    transition={{ duration: 0.5 }}
+                                    className=' rotate-45'
+                                >
+                                    <svg
+                                        xmlns="http://www.w3.org/2000/svg" width="40" height="40" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" className="lucide lucide-plus-icon lucide-plus"><path d="M5 12h14" /><path d="M12 5v14" /></svg>
+                                </motion.div>
+                            )}
+                        </div>
+                    </AnimatePresence>
+                </div>
+            </div>
+            <Image src={Cloud} width={1600} height={100} alt='Apna chhota school' className=' w-full block md:hidden -translate-y-2 -rotate-x-180 ' />
+            < motion.div
+                key={isVisible}
+                initial={{ y: -10 }}
+                animate={{ y: isVisible ? -10 : -400 }}
+                exit={{ y: isVisible ? -400 : -10 }}
+                className=' mx-auto container w-full h-[40vh] bg-transparent px-4 '>
+                <div className=' border border-red-500 h-full rounded-2xl bg-white'>
+
+                </div>
+            </motion.div>
         </header>
     )
 }

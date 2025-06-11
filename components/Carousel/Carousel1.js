@@ -33,6 +33,15 @@ export default function Carousel1() {
                     dots: true,
                 },
             },
+            {
+                breakpoint: 960,
+                settings:{
+                    slidesToShow:2,
+                    slidesToScroll:1,
+                    infinite:true,
+                    dots: true,
+                }
+            }
         ],
     }
     return (

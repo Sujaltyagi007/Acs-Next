@@ -59,10 +59,10 @@ export default function Carousel2() {
                     320:{
                         slidesPerView:1
                     },
-                    420:{
+                    680:{
                         slidesPerView:2
                     },
-                    720:{
+                    860:{
                         slidesPerView:3
                     },
                     1920:{

@@ -4,6 +4,7 @@ import HeroSection from '@/component/Home/HeroSection'
 import About from '@/component/Home/About'
 import Mission from '@/component/Home/Mission'
 import Activity from '@/component/Home/Activity'
+import BehindStory from '@/component/Home/BehindStory'
 import Programs from '@/component/Home/Programs'
 import NewActivity from '@/component/Home/NewActivity'
 import Testimonials from '@/component/Home/Testimonial'
@@ -16,6 +17,7 @@ export default function page() {
       <About />
       <Mission />
       <Activity />
+      <BehindStory />
       <Programs />
       <NewActivity />
       <Testimonials />
