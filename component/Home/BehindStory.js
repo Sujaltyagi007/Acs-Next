@@ -33,7 +33,7 @@ export default function BehindStory() {
                         <div className=' absolute left-2 md:-left-2 lg:left-1 2xl:left-8 top-0 translate-y-[36%] md:-translate-y-[22%] lg:translate-y-18 '>
                             <Image src={Girl} width={150} height={100} alt='Girl-Child' className=' w-14 h-20 md:w-18 md:h-28 2xl:w-[150px] 2xl:h-[200px] ' />
                         </div>
-            <div className="container relative mx-auto flex flex-col lg:flex-row gap-8 lg:py-16 xl:px-8 2xl:px-0 p-4  ">
+            <div className="container relative mx-auto flex flex-col lg:flex-row gap-8 lg:py-16 xl:px-[5%] 2xl:px-0 p-4  ">
                 <div className="flex lg:w-1/3 lg:justify-center text-3xl font-bold  ">
                     <div className=" flex justify-center md:justify-start items-center md:items-start w-full ">
                         <div className=''>
