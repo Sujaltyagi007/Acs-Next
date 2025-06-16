@@ -1,5 +1,5 @@
 import Image from "next/image";
-import Cloud from "@/Assets/Home/cloud-2.png";
+import Cloud from "@/Assets/Home/Demo/cloud.png";
 import { Luckiest_Guy } from "next/font/google";
 import Link from "next/link";
 import { CiLocationOn } from "react-icons/ci";
