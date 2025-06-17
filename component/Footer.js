@@ -40,7 +40,7 @@ export default function Footer() {
                             alt="owl-Image"
                             width={80}
                             height={80}
-                            className=" w-8 -translate-x-[55%] md:-translate-x-[150%] lg:-translate-x-[55%] 2xl:-translate-x-[115%] md:w-14 lg:w-16 2xl:w-24 "
+                            className=" w-8 -translate-x-[55%] md:-translate-x-[150%] lg:-translate-x-[75%] xl:-translate-x-[50%] 2xl:-translate-x-[115%] md:w-14 lg:w-16 2xl:w-24 "
                         />
                         <Image
                             src={Owl}
