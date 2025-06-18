@@ -7,6 +7,7 @@ import { Comic_Neue, Luckiest_Guy } from 'next/font/google';
 import { AnimatePresence } from 'motion/react';
 import { useState } from 'react';
 import { motion } from 'motion/react';
+import { ImagePlay, LandPlot, ScanText, School } from 'lucide-react';
 const nunito = Comic_Neue({
     subsets: ['latin'],
     weight: ['700'],
@@ -114,8 +115,8 @@ export default function Navbar() {
                         key="mobile-menu"
                         initial={{ y: -400 }}
                         animate={{
-                            y: -10,
-                            transition: { type: 'spring', stiffness: 300, damping: 30 }
+                            y: 0,
+                            transition: { type: 'spring', stiffness: 400, damping: 30 }
                         }}
                         exit={{
                             y: -400,
@@ -123,13 +124,19 @@ export default function Navbar() {
                         }}
                         className='md:hidden mx-auto container w-full bg-transparent px-4'
                     >
-                        <div className='h-full rounded-2xl bg-white py-5 px-2'>
+                        <div className='h-full rounded-2xl bg-white py-5 px-2 flex flex-col gap-2'>
                             <Link href='/about' onClick={() => setIsVisible(false)}>
-                                <span><p>About</p></span>
+                                <span className=' flex items-center gap-2 px-2'><ScanText /><p>About</p></span>
                             </Link>
-                            <p>Hello</p>
-                            <p>Hello</p>
-                            <p>Hello</p>
+                            <Link href='/Admission' onClick={() => setIsVisible(false)}>
+                                <span className=' flex items-center gap-2 px-2'><LandPlot /><p>Admission</p></span>
+                            </Link>
+                            <Link href='/Programs' onClick={() => setIsVisible(false)}>
+                                <span className=' flex items-center gap-2 px-2'><School /> <p>Programs</p></span>
+                            </Link>
+                            <Link href='/Gallery' onClick={() => setIsVisible(false)}>
+                                <span className=' flex items-center gap-2 px-2'><ImagePlay className=' ' /><p>Gallery</p></span>
+                            </Link>
                         </div>
                     </motion.div>
                 )}

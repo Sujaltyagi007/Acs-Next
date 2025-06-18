@@ -1,7 +1,7 @@
 import Bannner from '@/Assets/About/Banner/About-us.png'
 import Link from 'next/link'
 import { Bubblegum_Sans, Comic_Neue } from 'next/font/google'
-import { MdOutlineKeyboardArrowRight } from "react-icons/md";
+import { GiImbricatedArrows } from "react-icons/gi";
 import Image from 'next/image';
 import Img from '@/Assets/About/Image/about-3.png'
 import FootBall from '@/components/Svg/FootBall.svg'
@@ -29,7 +29,7 @@ export default function Banner() {
         <div className="absolute inset-0 z-20 bg-black opacity-40 flex justify-center items-center h-full top-0 left-0  w-full "></div>
         <div className=' absolute inset-0 z-20  flex flex-col gap-4 justify-center items-center opacity-100 h-full text-white '>
           <p className={`${comic.className} font-extrabold text-3xl lg:text-7xl `}>About Us</p>
-          <span className=' flex justify-center items-center gap-1 text-[#ffbb01]'><Link href='/'><p>Home</p></Link><MdOutlineKeyboardArrowRight /><Link href='/about'><p>About</p></Link></span>
+          <span className=' flex justify-center items-center gap-2 text-[#ffbb01]'><Link href='/'><p>Home</p></Link><GiImbricatedArrows className=' -rotate-45' /><Link href='/about'><p>About</p></Link></span>
         </div>
 
       </div>

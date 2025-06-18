@@ -3,6 +3,7 @@ import Image from 'next/image'
 import Hat from '@/components/Svg/Hat.svg'
 import Img1 from '@/Assets/About/Creativity/a1.jpg'
 import Img2 from '@/Assets/About/Creativity/a2.jpg'
+import Active from '@/Assets/About/Creativity/acitivites-side.png'
 
 const bubble = Bubblegum_Sans({
     subsets: ['latin'],
@@ -10,40 +11,42 @@ const bubble = Bubblegum_Sans({
 })
 export default function Creativity() {
     return (
-        <section className=' relative '>
-            <span className=' bg-red-400 h-20 absolute right-0 bottom-1/2 p-5'>
-
+        <section className=' relative h-fit my-4 '>
+            <span className=' absolute right-0 top-1/2 md:-translate-y-1/2 '>
+                <Image src={Active} width={1000} height={1000} alt='About-Section-ActiveSlide' className='w-20 rotate-180  ' />
             </span>
-            <div className=' container mx-auto flex justify-around items-center'>
-                <div className='  w-4/12  flex flex-col gap-4 '>
+            <div className=' container mx-auto flex flex-col sm:flex-row justify-around items-center w-[90vw] '>
+                <div className=' flex flex-col gap-2 '>
                     <span className={`${bubble.className}`}>
-                        <Image src={Hat} width={120} height={120} alt='Education' className='' />
+                        <Image src={Hat} width={90} height={90} alt='Education' className='' />
                         <p className=' text-[#EB1551] '> Find Kid's Creativity </p> </span>
                     <h1 className=' text-3xl font-bold'>Your Children’s <br /> Creativity Works!</h1>
-                    <p className=' text-base max-w-80'>
-                        Molestie at elementum eu facilisis sed odio morbi quis. Magna etiam tempor orci eu lobortis. Ullamcorper dignissim cras tincidunt lobortis. Volutpat blandit aliquam etiam erat velit.
+                    <p className=' max-w-80 text-sm '>
+                        Every child is an artist—and here, their imagination comes to life!
+                        From colorful drawings to playful crafts, explore the world through their eyes.
+                        We celebrate creativity, curiosity, and the joy of self-expression.
                     </p>
-                    <button className=" text-xl bg-[#EB1551] px-4 py-2 rounded-4xl w-fit">
-                        Creative Works
+                    <button className=" cursor-pointer group relative mt-2 text-sm overflow-hidden text-white bg-[#EB1551] rounded-full w-fit">
+                        <span className=' group-hover:w-full group-hover:h-full rounded-full bottom-0 left-0 h-0 w-0 transition-all ease-linear duration-400 -rotate-6 group-hover:-rotate-0 z-10  absolute bg-green-500'></span>
+                        <p className=' py-3 px-6 z-20 relative  '>Creative Works</p>
                     </button>
                 </div>
-                <div className=' flex justify-between w-7/12 '>
+                <div className=' flex flex-col md:flex-row justify-around item-center md:items-end md:self-end py-6 w-[80vw] md:w-fit   sm:py-0  '>
                     <div
-                        className=' w-[400px] h-[300px] bg-center bg-cover rounded-br-full bg-no-repeat'
+                        className='  aspect-[5/4] md:w-[350px] md:h-[280px] bg-center bg-cover rounded-br-full bg-no-repeat'
                         style={{
                             backgroundImage: `url(${Img1.src})`
                         }}
                     >
                     </div>
                     <div
-                        className=' w-[400px] h-[300px] bg-center rounded-tl-full bg-cover bg-no-repeat'
+                        className=' aspect-[5/4] md:w-[350px] md:h-[280px] bg-center rounded-tl-full bg-cover bg-no-repeat'
                         style={{
                             backgroundImage: `url(${Img2.src})`
                         }}
                     >
                     </div>
                 </div>
-
             </div>
         </section>
     )
