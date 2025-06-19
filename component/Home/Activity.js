@@ -62,7 +62,7 @@ export default function Activity() {
     <section ref={ref} className="relative overflow-hidden py-4 md:py-10 ">
       <motion.div
         style={{ x }}
-        className="absolute top-20 2xl:-left-40 2xl:top-48 w-full h-full "
+        className="absolute z-10 -top-0 2xl:-left-40 2xl:top-48 w-full h-full "
       >
         <Image
           className="w-20 h-20 lg:w-48 lg:h-48 opacity-70"

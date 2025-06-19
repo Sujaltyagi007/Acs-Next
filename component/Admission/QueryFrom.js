@@ -17,7 +17,7 @@ export default function QueryFrom() {
                     Admission From
                 </h1>
                 <div className=' flex flex-col gap-4 items-center py-6  '>
-                    <input type='text' placeholder={`Child's Name`} className=' rounded-full py-2 px-6 w-9/10 border border-amber-300 outline-amber-400 shadow-amber-300/20 shadow-2xl  ' />
+                    <input type='text' placeholder={`Child's Name`} className=' rounded-full py-2 aspect-[2:4] px-6 w-9/10 border border-amber-300 outline-amber-400 shadow-amber-300/20 shadow-2xl  ' />
                     <input type='text' placeholder={`Father's Name`} className='rounded-full py-2 px-6 w-9/10  border border-amber-300 outline-amber-400 shadow-amber-300/20 shadow-2xl ' />
                     <input type='text' placeholder={`Mother's Name`} className='rounded-full py-2 px-6 w-9/10  border border-amber-300 outline-amber-400 shadow-amber-300/20 shadow-2xl ' />
                     <input type='text' placeholder={`Child's Age`} className='rounded-full py-2 px-6 w-9/10  border border-amber-300 outline-amber-400 shadow-amber-300/20 shadow-2xl ' />

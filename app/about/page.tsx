@@ -12,7 +12,6 @@ export default function page() {
         <Facility />
         <Creativity />
         <Footer />
-      
     </div>
   )
 }

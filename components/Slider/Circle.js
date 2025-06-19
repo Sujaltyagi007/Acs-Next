@@ -1,7 +1,6 @@
 import Slide1 from '@/components/Slider/Slide1.jpg'
 import Student from '../Svg/Student.svg'
 import Image from 'next/image'
-import { motion } from 'motion/react'
 
 export default function Circle() {
     return (

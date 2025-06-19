@@ -10,7 +10,7 @@ export default function ActivityCard({ item }) {
   return (
     <div className=" relative md:w-[380px] md:h-[460px] lg:w-[300px] lg:h-[400px] w-[170px] h-[290px] my-2 md:my-0 flex flex-col justify-center items-center bg-center bg-cover bg-no-repeat ">
         <p className={`md:translate-y-10 text-center md:text-start mx-2 md:mx-0 text-[14px] font-extrabold `}
-        style={{ color: `${item.fontColor}` }}
+        style={{ color: `${item.fontColor}`, }}
         > 
           {item.title}
         </p>

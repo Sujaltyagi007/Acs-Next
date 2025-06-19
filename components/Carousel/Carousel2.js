@@ -9,8 +9,6 @@ import Trapziod from '@/components/Slider/Trapziod'
 import Square from '@/components/Slider/Square'
 import Rombus from '@/components/Slider/Rombus'
 import Triangle from '@/components/Slider/Triangle'
-import Image from 'next/image';
-import ButterFly from '@/components/Svg/Butterfly.svg'
 import Slide1 from '@/components/Slider/Slide1.jpg'
 import Slide2 from '@/components/Slider/Slide2.jpg'
 import Slide3 from '@/components/Slider/Slide3.jpg'

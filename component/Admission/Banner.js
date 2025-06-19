@@ -10,7 +10,7 @@ const comic = Comic_Neue({
 
 export default function Banner() {
     return (
-        <div className=' relative mt-[15%] md:mt-[4.3%] lg:mt-[4%] xl:mt-[4%] w-full h-full  '>
+        <section className=' relative mt-[12%] md:mt-[4.3%] lg:mt-[4%] xl:mt-[4%] w-full h-full  '>
             <div className=' w-full pl-[5%] bg-cover bg-center bg-no-repeat h-[25vh] sm:h-[60vh] md:h-[70vh] lg:[70vh] relative '
                 style={{
                     backgroundImage: `url(${Bannner.src})`,
@@ -22,6 +22,6 @@ export default function Banner() {
                     <span className=' flex justify-center items-center gap-1 text-[#ffbb01]'><Link href='/'><p>Home</p></Link><MdOutlineDoubleArrow /><Link href='/Admission'><p>Admission</p></Link></span>
                 </div>
             </div>
-        </div>
+        </section>
     )
 }

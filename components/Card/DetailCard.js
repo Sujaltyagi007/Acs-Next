@@ -1,6 +1,6 @@
 import Image from "next/image"
 
-export default function DetailCard({bgImage, title, style , bgColor}) {
+export default function DetailCard({bgImage, title , bgColor}) {
     return (
         <div className={"  min-w-[300px]  lg:max-w-[350px] m-3  lg:mx-auto cursor-pointer flex flex-col justify-center p-2 shadow-lg rounded-3xl   " + (bgColor ? bgColor : "")}>
             <div className="card relative rounded-3xl   h-[15rem] bg-slate-300 overflow-hidden  ">

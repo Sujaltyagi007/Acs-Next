@@ -29,7 +29,7 @@ export default function Mission() {
                     style={{
                         translateX: translate,
                     }}
-                    className="absolute -right-20 top-10  ">
+                    className="absolute -right-20 top-0  ">
                     <Image src={Fish} width={200} height={200} alt="Apna Chhota School" className='w-20 lg:w-48 h-20 lg:h-48 opacity-75 ' />
                 </motion.div>
                 <div className="w-full lg:w-1/3 flex 2xl:px-4 2xl:justify-start lg:justify-center">

@@ -2,8 +2,8 @@ import Img1 from '@/Assets/Admission/tab1.jpg'
 import Img2 from '@/Assets/Admission/tab2.jpg'
 import Img3 from '@/Assets/Admission/tab3.jpg'
 import Img4 from '@/Assets/Admission/tab4.jpg'
+import Logo from '@/public/Logo/Acs.png'
 import { Nunito } from 'next/font/google';
-import { FaMapLocationDot } from "react-icons/fa6";
 import { FaEarthAmericas } from "react-icons/fa6";
 import { CiFacebook } from "react-icons/ci";
 import { FaTwitter } from "react-icons/fa";
@@ -17,35 +17,62 @@ const nun = Nunito({
 export default function Info() {
     const images = [Img1, Img2, Img3, Img4]
     return (
-        <section className='grid grid-cols-2'>
-            <div className='grid grid-cols-2 w-6/5 '>
-                {
-                    images.map((img, index) => (
-                        <div key={index} className='w-full h-full p-4 mx-4 '>
-                            <p className={`aspect-[5/4] ${index % 2 ? 'rounded-tr-full' : 'rounded-br-full'}  bg-center bg-cover bg-no-repeat`}
-                                style={{
-                                    backgroundImage: `url(${img.src})`
-                                }}>
-                            </p>
-                            <span></span>
-                        </div>
-                    ))
-                }
+        <section className='flex flex-col md:flex-row h-fit w-full pb-10 '>
+            <div className=' w-full md:w-3/5 flex bg-center bg-no-repeat flex-wrap h-full  '
+              style={{
+                backgroundImage: `url(${Logo.src})`,
+                backgroundSize: '100px',
+              }}
+            >
+                <div className='w-1/2 h-fit p-2 md:p-6  '>
+                    <div className={`aspect-[5/4] rounded-br-full bg-center bg-cover bg-no-repeat`}
+                        style={{
+                            backgroundImage: `url(${Img1.src})`
+                        }}>
+                    </div>
+                    <span></span>
+                </div>
+                <div className='w-1/2 h-full p-2 md:p-6 '>
+                    <div className={`aspect-[5/4] rounded-bl-full md:rounded-bl-none rounded-tr-none md:rounded-tr-full  bg-center bg-cover bg-no-repeat`}
+                        style={{
+                            backgroundImage: `url(${Img2.src})`
+                        }}>
+                    </div>
+                    <span></span>
+                </div>
+                <div className='w-1/2 h-fit p-2 md:p-6'>
+                    <div className={`aspect-[5/4]  rounded-br-none md:rounded-br-full md:rounded-tr-none rounded-tr-full bg-center bg-cover bg-no-repeat`}
+                        style={{
+                            backgroundImage: `url(${Img3.src})`,
+                        }}>
+                    </div>
+                    <span></span>
+                </div>
+                <div className='w-1/2 h-fit p-2 md:p-6'>
+                    <div className={`aspect-[5/4] rounded-tl-full rounded-tr-none md:rounded-tl-none md:rounded-tr-full bg-center bg-cover bg-no-repeat`}
+                        style={{
+                            backgroundImage: `url(${Img4.src})`
+                        }}>
+                    </div>
+                    <span></span>
+                </div>
             </div>
-            <div className=' w-full relative h-full flex justify-end items-center ' >
-                <div className="w-3/5 h-4/5 rounded-tl-4xl rounded-bl-4xl relative bg-[#eb1551] text-white shadow-lg">
-                    <address className="absolute z-10 p-6 w-11/12 flex flex-col h-[90%] justify-around max-w-xl top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 rounded-xl"
-                        aria-label="Phone Contact Information" >
-                        <div className=' absolute z-10 -left-12 top-1/2 flex items-center -translate-x-0 -translate-y-1/2 w-8 h-3/5 bg-[#c55d0a] rounded-l-full '>
-                            <div className=' w-[55px] z-[999] absolute h-[80%] bg-[#f7941e] rounded-r-full '>
-                                {/* <p className='bg-red-300 origin-center -rotate-90'>acs</p> */}
-                            </div>
+            <div className=' w-full h-full md:w-2/5 py-10 self-center flex justify-center md:justify-end items-center ' >
+                <div className=" h-full relative w-[90%] py-10 flex justify-center items-start rounded-4xl md:rounded-none rounded-tl-0 md:rounded-tl-[100px] rounded-bl-0 md:rounded-bl-[100px] bg-[#eb1551] text-white shadow-lg">
+                    <div className=' absolute z-10 left-1/2 rotate-90 md:rotate-0 -top-[30%] md:-left-8 md:top-1/2 flex items-center -translate-x-1/2 md:translate-x-0 translate-y-0 md:-translate-y-1/2 w-0 md:w-8 h-3/5 bg-[#c55d0a] rounded-l-full '>
+                        <div className=' w-[75px] z-20 absolute flex justify-center items-center h-[80%] bg-[#f7941e] rounded-r-full '>
+                            <p className=' rotate-270 text-nowrap '>Apna Chhota School</p>
                         </div>
-                        <div className="flex flex-col sm:flex-row items-center justify-start gap-8 sm:text-2xl">
-                            <div className="flex items-start gap-10">
-                                <Phone aria-hidden="true" className="mt-1 text-2xl" />
+                    </div>
+                    <address className=" translate-y-[5%] md:translate-y-0 p-10 w-11/12 flex flex-col items-start justify-around max-w-xl rounded-xl"
+                        aria-label="Phone Contact Information" >
+                        <div className="flex flex-col py-2 sm:flex-row items-center justify-start gap-8 sm:text-2xl">
+                            <div className="flex items-start gap-4 md:gap-10">
+                                <span className="mt-1 md:text-2xl" >
+                                    <Phone aria-hidden="true" />
+                                </span>
                                 <div className={`${nun.className}`}>
-                                    <h2 className="text-lg sm:text-lg font-semibold mb-2">Phone</h2>
+                                    <h2 className="text-[16px] font-bold sm:text-lg sm:font-semibold sm:mb-2">Phone</h2>
                                     <ul className="space-y-1 text-[14px] ">
                                         <li>
                                             <a href="tel:+919999955555" className="hover:underline">
@@ -61,11 +88,13 @@ export default function Info() {
                                 </div>
                             </div>
                         </div>
-                        <div className="flex flex-col sm:flex-row items-center justify-start gap-8 sm:text-2xl">
-                            <div className="flex items-start gap-10">
-                                <MessageSquareShare aria-hidden="true" className="mt-1 text-2xl" />
+                        <div className="flex flex-col py-2 sm:flex-row items-center justify-start gap-8 sm:text-2xl">
+                            <div className="flex items-start gap-4 md:gap-10">
+                                <span className="mt-1 text-2xl">
+                                    <MessageSquareShare aria-hidden="true" />
+                                </span>
                                 <div className={`${nun.className}`}>
-                                    <h2 className="text-lg sm:text-lg font-semibold mb-2">Email</h2>
+                                    <h2 className="text-[16px] font-bold sm:text-lg sm:font-semibold sm:mb-2">Email</h2>
                                     <ul className="space-y-1 text-[14px] ">
                                         <li>
                                             <a href="mailto:info@example.com" className="">
@@ -81,13 +110,13 @@ export default function Info() {
                                 </div>
                             </div>
                         </div>
-                        <div className="flex flex-col sm:flex-row items-center justify-start gap-8 sm:text-2xl">
-                            <div className="flex items-start gap-10">
+                        <div className="flex flex-col py-2 sm:flex-row items-center justify-start gap-8 sm:text-2xl">
+                            <div className="flex items-start gap-4 md:gap-10">
                                 <span className="mt-1 text-2xl ">
                                     <MapPinned aria-hidden="true" />
                                 </span>
                                 <div className={`${nun.className}`}>
-                                    <h2 className="text-lg sm:text-lg font-semibold mb-2">Location</h2>
+                                    <h2 className="text-[16px] font-bold sm:text-lg sm:font-semibold sm:mb-2">Location</h2>
                                     <ul className="space-y-1 text-[14px] ">
                                         <li>
                                             Rama Road Industrial Area, Kirti Nagar, Delhi-110015
@@ -96,13 +125,13 @@ export default function Info() {
                                 </div>
                             </div>
                         </div>
-                        <div className="flex flex-col sm:flex-row items-center justify-start gap-8 sm:text-2xl">
-                            <div className="flex items-start gap-10">
+                        <div className="flex flex-col py-2 sm:flex-row items-center justify-start gap-8 sm:text-2xl">
+                            <div className="flex items-start gap-4 md:gap-10">
                                 <FaEarthAmericas aria-hidden="true" className="mt-1 text-2xl" />
                                 <div className={`${nun.className}`}>
                                     <h2 className="text-lg sm:text-lg font-semibold mb-2">Social Media</h2>
                                     <ul className="space-y-1 text-[14px] ">
-                                        <li className=' flex gap-6'>
+                                        <li className=' flex gap-6 text-xl md:text-2xl'>
                                             <a href="mailto:info@example.com" className="">
                                                 <CiFacebook />
                                             </a>
@@ -123,7 +152,6 @@ export default function Info() {
                     </address>
                 </div>
             </div>
-
         </section>
     )
 }
